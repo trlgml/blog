@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "repository": "git@trlgml_github.com:trlgml/blog.git",
+  "author": "trlgml <1229771221@qq.com>",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.4",
+    "@vuepress/plugin-nprogress": "^1.5.4",
+    "@vuepress/plugin-pwa": "^1.5.4",
+    "vuepress": "^1.5.3"
+  }
+}
