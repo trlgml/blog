@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>字符串 | 妍辰~</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/blog/favicon.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3673cdd1fee1a108e55a88e9d67f4f07";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })()</script>
+    <meta name="description" content="JavaScript Node.js">
+    <meta name="keywords" itemprop="keywords" content="JavaScript Node.js">
+    <meta property="og:title" content="JavaScript Node.js">
+    <meta property="og:description" content="JavaScript Node.js">
+    <link rel="preload" href="/blog/assets/css/0.styles.519963dd.css" as="style"><link rel="preload" href="/blog/assets/js/app.18cdfc2c.js" as="script"><link rel="preload" href="/blog/assets/js/2.272c6da6.js" as="script"><link rel="preload" href="/blog/assets/js/44.4e7d770a.js" as="script"><link rel="preload" href="/blog/assets/js/3.4c2167e5.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4e2cb940.js"><link rel="prefetch" href="/blog/assets/js/11.021b7cc6.js"><link rel="prefetch" href="/blog/assets/js/12.e8866b98.js"><link rel="prefetch" href="/blog/assets/js/13.d7504f38.js"><link rel="prefetch" href="/blog/assets/js/14.3d3e0959.js"><link rel="prefetch" href="/blog/assets/js/15.49da7f4e.js"><link rel="prefetch" href="/blog/assets/js/16.dc12210a.js"><link rel="prefetch" href="/blog/assets/js/17.b969adda.js"><link rel="prefetch" href="/blog/assets/js/18.b977e223.js"><link rel="prefetch" href="/blog/assets/js/19.2074f0f6.js"><link rel="prefetch" href="/blog/assets/js/20.61bf4c8e.js"><link rel="prefetch" href="/blog/assets/js/21.17fab134.js"><link rel="prefetch" href="/blog/assets/js/22.5dd0ad1b.js"><link rel="prefetch" href="/blog/assets/js/23.d8a25e70.js"><link rel="prefetch" href="/blog/assets/js/24.ee2205f8.js"><link rel="prefetch" href="/blog/assets/js/25.f2d70a23.js"><link rel="prefetch" href="/blog/assets/js/26.8affd8f7.js"><link rel="prefetch" href="/blog/assets/js/27.39af6414.js"><link rel="prefetch" href="/blog/assets/js/28.8aa380ae.js"><link rel="prefetch" href="/blog/assets/js/29.6fd970ed.js"><link rel="prefetch" href="/blog/assets/js/30.3db650a5.js"><link rel="prefetch" href="/blog/assets/js/31.3a5fbf0b.js"><link rel="prefetch" href="/blog/assets/js/32.027296c1.js"><link rel="prefetch" href="/blog/assets/js/33.4a3b9369.js"><link rel="prefetch" href="/blog/assets/js/34.23cd9086.js"><link rel="prefetch" href="/blog/assets/js/35.2b4f598f.js"><link rel="prefetch" href="/blog/assets/js/36.f894129d.js"><link rel="prefetch" href="/blog/assets/js/37.b2109f0d.js"><link rel="prefetch" href="/blog/assets/js/38.3936c4a7.js"><link rel="prefetch" href="/blog/assets/js/39.1e85e682.js"><link rel="prefetch" href="/blog/assets/js/4.3fc220be.js"><link rel="prefetch" href="/blog/assets/js/40.19195c14.js"><link rel="prefetch" href="/blog/assets/js/41.a7b31ee5.js"><link rel="prefetch" href="/blog/assets/js/42.b07df96e.js"><link rel="prefetch" href="/blog/assets/js/43.62b5869e.js"><link rel="prefetch" href="/blog/assets/js/45.7f18e125.js"><link rel="prefetch" href="/blog/assets/js/46.22d9d0ae.js"><link rel="prefetch" href="/blog/assets/js/5.c8fedf2a.js"><link rel="prefetch" href="/blog/assets/js/6.a67beace.js"><link rel="prefetch" href="/blog/assets/js/7.12ec32d5.js"><link rel="prefetch" href="/blog/assets/js/8.8034232f.js"><link rel="prefetch" href="/blog/assets/js/9.8e739b43.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.519963dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">妍辰~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/home/" class="nav-link">
+  目录
+</a></div><div class="nav-item"><a href="https://github.com/trlgml/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/home/" class="nav-link">
+  目录
+</a></div><div class="nav-item"><a href="https://github.com/trlgml/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/%E6%95%B0%E6%8D%AE%E5%BA%93/" aria-current="page" class="sidebar-link">数据库</a></li><li><a href="/blog/数据库/redis命令.html" class="active sidebar-link">redis命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/数据库/redis命令.html#字符串" class="sidebar-link">字符串</a></li><li class="sidebar-sub-header"><a href="/blog/数据库/redis命令.html#哈希表" class="sidebar-link">哈希表</a></li><li class="sidebar-sub-header"><a href="/blog/数据库/redis命令.html#列表" class="sidebar-link">列表</a></li><li class="sidebar-sub-header"><a href="/blog/数据库/redis命令.html#集合" class="sidebar-link">集合</a></li><li class="sidebar-sub-header"><a href="/blog/数据库/redis命令.html#有序集合" class="sidebar-link">有序集合</a></li><li class="sidebar-sub-header"><a href="/blog/数据库/redis命令.html#有效期" class="sidebar-link">有效期</a></li><li class="sidebar-sub-header"><a href="/blog/数据库/redis命令.html#key操作" class="sidebar-link">key操作</a></li></ul></li><li><a href="/blog/数据库/缓存的使用.html" class="sidebar-link">缓存的使用</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="字符串"><a href="#字符串" class="header-anchor">#</a> 字符串</h2> <div class="language- extra-class"><pre class="language-text"><code>set 覆盖写
+setnx 不存在写
+setex 覆盖写并设置过期时间（秒）
+psetex 覆盖写并设置过期时间（毫秒)
+get 获取
+getset 返回旧值设置新值
+strlen 值的长度
+append 字符串尾部拼接值
+setrange 从指定偏移量重写值
+getrange 获取字符串指定区间（截取获取）
+inc 值增加1
+incrby 值增加指定值
+incrbyfloat 值增加指定浮点数
+decr 值减少1
+decrby 值减少指定值
+mset 批量设置键
+mget 批量获取键
+msetnx 批量设置不存在的键
+</code></pre></div><h2 id="哈希表"><a href="#哈希表" class="header-anchor">#</a> 哈希表</h2> <div class="language- extra-class"><pre class="language-text"><code>hset 字段覆盖写值
+hsetnx 字段不覆盖写值
+hget 获取指定字段
+hexists 指定字段是否存在
+hdel 删除指定字段
+hlen 字段数量
+hstrlen 指定字段的长度
+hincrby 指定字段增加
+hincrbyfloat 指定字段增加浮点数
+hmset 批量设置指定字段值
+hmget 批量获取指定字段值
+hkeys 获取所有字段
+hvals 获取所有值
+hgetall 获取所有字段
+</code></pre></div><h2 id="列表"><a href="#列表" class="header-anchor">#</a> 列表</h2> <div class="language- extra-class"><pre class="language-text"><code>lpush 列表头插入值
+lpushx 列表头插入值（必须存在）
+rpush 列表尾部插入值
+rpushx 列表尾部插入值（必须存在）
+lpop 列表头删除值
+rpop 列表尾部删除值
+rpoplposh 一个列表尾部删除添加到另一个列表头部
+lrem 删除指定数量元素
+llen 元素数量
+lindex 指定下边的元素
+linsert 插入元素到指定元素的前后
+lset 修改指定位置的元素
+lrange 返回指定区间元素
+ltrim 只保留指定区间的元素
+blpop 阻塞式头部弹出
+brpop 阻塞式尾部弹出
+brpoplpush 阻塞式一个列表尾部删除添加到另一个列表头部
+</code></pre></div><h2 id="集合"><a href="#集合" class="header-anchor">#</a> 集合</h2> <div class="language- extra-class"><pre class="language-text"><code>sadd 添加元素到集合，重复则忽略
+sismember 元素是否是其成员
+spop 移除返回一个随机元素
+srandmenber 返回指定数量元素
+srem 移除指定元素
+smove 移动元素到指定集合
+scard 集合的元素数
+smenbers 集合的全部成员
+sinter 集合交集
+sinterstore 集合交集并存储
+sunion 集合并集
+sunionstore 集合并集并存储
+sdiff 集合差集
+sdiffstore 集合差集并存储
+</code></pre></div><h2 id="有序集合"><a href="#有序集合" class="header-anchor">#</a> 有序集合</h2> <div class="language- extra-class"><pre class="language-text"><code>zadd 添加数据
+zscore 返回指定成员分数
+zincrby 指定成员分数增加
+zcard 集合总数
+zcount 指定分数区间的数量 （-inf，+inf）
+zrange 指定区间的成员-增（0，-1）
+zrevrange 指定区间的成员-减（0，-1）
+zrangebyscore 指定分数的成员-增（-inf，+inf）
+zrevrangebyscore 指定分数的成员-减（-inf，+inf）
+zrank 指定成员的排名-增
+zrevrank 指定成员的排名-减
+zrem 删除指定成员
+zremrangebyrank 删除指定区间的成员
+zremrangebyscore 删除指定分数的成员
+zunionstore 集合取并集
+zinterstore 集合取交集
+zrangebylex 指定成员区间的成员
+zlexcount 指定成员区级数
+zremrangebylex 删除指定成员的成员
+</code></pre></div><h2 id="有效期"><a href="#有效期" class="header-anchor">#</a> 有效期</h2> <div class="language- extra-class"><pre class="language-text"><code>expire 指定key过期时间（秒数）
+pexpire 指定key过期时间（毫秒数)
+expireat 指定key过期时间（秒时间戳）
+pexpireat 指定key过期时间（毫秒时间戳）
+ttl 返回剩余的过期时间（秒）
+pttl 返回剩余过期时间（毫秒）
+persist 移除过期时间
+</code></pre></div><h2 id="key操作"><a href="#key操作" class="header-anchor">#</a> key操作</h2> <div class="language- extra-class"><pre class="language-text"><code>exists key是否存在
+type key类型
+rename 重命名（目标存在覆盖）
+reameex 重命名（目标不存时）
+move 移动指定key到指定db
+del 删除key
+randomkey 随机返回一个key
+dbsize db中key的数量
+keys 指定模式的key
+scan
+sort 返回列表、集合、有序集合排序后的元素
+flushdb 清空当前db的key
+flushall 清空所有db的key
+select 切换指定库
+swapdb 兑换两个db
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="prev router-link-active">
+        数据库
+      </a></span> <span class="next"><a href="/blog/数据库/缓存的使用.html">
+        缓存的使用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/blog/assets/js/app.18cdfc2c.js" defer></script><script src="/blog/assets/js/2.272c6da6.js" defer></script><script src="/blog/assets/js/44.4e7d770a.js" defer></script><script src="/blog/assets/js/3.4c2167e5.js" defer></script>
+  </body>
+</html>

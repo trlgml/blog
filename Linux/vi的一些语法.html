@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>命令模式 | 妍辰~</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/blog/favicon.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3673cdd1fee1a108e55a88e9d67f4f07";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })()</script>
+    <meta name="description" content="JavaScript Node.js">
+    <meta name="keywords" itemprop="keywords" content="JavaScript Node.js">
+    <meta property="og:title" content="JavaScript Node.js">
+    <meta property="og:description" content="JavaScript Node.js">
+    <link rel="preload" href="/blog/assets/css/0.styles.519963dd.css" as="style"><link rel="preload" href="/blog/assets/js/app.18cdfc2c.js" as="script"><link rel="preload" href="/blog/assets/js/2.272c6da6.js" as="script"><link rel="preload" href="/blog/assets/js/24.ee2205f8.js" as="script"><link rel="preload" href="/blog/assets/js/3.4c2167e5.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4e2cb940.js"><link rel="prefetch" href="/blog/assets/js/11.021b7cc6.js"><link rel="prefetch" href="/blog/assets/js/12.e8866b98.js"><link rel="prefetch" href="/blog/assets/js/13.d7504f38.js"><link rel="prefetch" href="/blog/assets/js/14.3d3e0959.js"><link rel="prefetch" href="/blog/assets/js/15.49da7f4e.js"><link rel="prefetch" href="/blog/assets/js/16.dc12210a.js"><link rel="prefetch" href="/blog/assets/js/17.b969adda.js"><link rel="prefetch" href="/blog/assets/js/18.b977e223.js"><link rel="prefetch" href="/blog/assets/js/19.2074f0f6.js"><link rel="prefetch" href="/blog/assets/js/20.61bf4c8e.js"><link rel="prefetch" href="/blog/assets/js/21.17fab134.js"><link rel="prefetch" href="/blog/assets/js/22.5dd0ad1b.js"><link rel="prefetch" href="/blog/assets/js/23.d8a25e70.js"><link rel="prefetch" href="/blog/assets/js/25.f2d70a23.js"><link rel="prefetch" href="/blog/assets/js/26.8affd8f7.js"><link rel="prefetch" href="/blog/assets/js/27.39af6414.js"><link rel="prefetch" href="/blog/assets/js/28.8aa380ae.js"><link rel="prefetch" href="/blog/assets/js/29.6fd970ed.js"><link rel="prefetch" href="/blog/assets/js/30.3db650a5.js"><link rel="prefetch" href="/blog/assets/js/31.3a5fbf0b.js"><link rel="prefetch" href="/blog/assets/js/32.027296c1.js"><link rel="prefetch" href="/blog/assets/js/33.4a3b9369.js"><link rel="prefetch" href="/blog/assets/js/34.23cd9086.js"><link rel="prefetch" href="/blog/assets/js/35.2b4f598f.js"><link rel="prefetch" href="/blog/assets/js/36.f894129d.js"><link rel="prefetch" href="/blog/assets/js/37.b2109f0d.js"><link rel="prefetch" href="/blog/assets/js/38.3936c4a7.js"><link rel="prefetch" href="/blog/assets/js/39.1e85e682.js"><link rel="prefetch" href="/blog/assets/js/4.3fc220be.js"><link rel="prefetch" href="/blog/assets/js/40.19195c14.js"><link rel="prefetch" href="/blog/assets/js/41.a7b31ee5.js"><link rel="prefetch" href="/blog/assets/js/42.b07df96e.js"><link rel="prefetch" href="/blog/assets/js/43.62b5869e.js"><link rel="prefetch" href="/blog/assets/js/44.4e7d770a.js"><link rel="prefetch" href="/blog/assets/js/45.7f18e125.js"><link rel="prefetch" href="/blog/assets/js/46.22d9d0ae.js"><link rel="prefetch" href="/blog/assets/js/5.c8fedf2a.js"><link rel="prefetch" href="/blog/assets/js/6.a67beace.js"><link rel="prefetch" href="/blog/assets/js/7.12ec32d5.js"><link rel="prefetch" href="/blog/assets/js/8.8034232f.js"><link rel="prefetch" href="/blog/assets/js/9.8e739b43.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.519963dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">妍辰~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/home/" class="nav-link">
+  目录
+</a></div><div class="nav-item"><a href="https://github.com/trlgml/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/home/" class="nav-link">
+  目录
+</a></div><div class="nav-item"><a href="https://github.com/trlgml/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/Linux/" aria-current="page" class="sidebar-link">Linux</a></li><li><a href="/blog/Linux/OpenSSL.html" class="sidebar-link">OpenSSL</a></li><li><a href="/blog/Linux/ssh-keygen.html" class="sidebar-link">ssh-keygen</a></li><li><a href="/blog/Linux/PATH.html" class="sidebar-link">环境变量PATH</a></li><li><a href="/blog/Linux/编码类型.html" class="sidebar-link">编码类型</a></li><li><a href="/blog/Linux/vi的一些语法.html" class="active sidebar-link">vi的一些语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/Linux/vi的一些语法.html#命令模式" class="sidebar-link">命令模式</a></li><li class="sidebar-sub-header"><a href="/blog/Linux/vi的一些语法.html#插入模式" class="sidebar-link">插入模式</a></li><li class="sidebar-sub-header"><a href="/blog/Linux/vi的一些语法.html#创建文件" class="sidebar-link">创建文件</a></li><li class="sidebar-sub-header"><a href="/blog/Linux/vi的一些语法.html#退出" class="sidebar-link">退出</a></li><li class="sidebar-sub-header"><a href="/blog/Linux/vi的一些语法.html#移动光标" class="sidebar-link">移动光标</a></li><li class="sidebar-sub-header"><a href="/blog/Linux/vi的一些语法.html#编辑文本" class="sidebar-link">编辑文本</a></li><li class="sidebar-sub-header"><a href="/blog/Linux/vi的一些语法.html#删除文本" class="sidebar-link">删除文本</a></li><li class="sidebar-sub-header"><a href="/blog/Linux/vi的一些语法.html#复制与黏贴" class="sidebar-link">复制与黏贴</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="命令模式"><a href="#命令模式" class="header-anchor">#</a> 命令模式</h2> <blockquote><p>命令模式下，我们可以执行保存文件、在 VI 内运行命令、复制/剪切/粘贴操作，以及查找/替换等任务。当我们处于插入模式时，我们可以按下 Escape（Esc）键返回命令模式</p></blockquote> <h2 id="插入模式"><a href="#插入模式" class="header-anchor">#</a> 插入模式</h2> <blockquote><p>在插入模式下，我们可以键入文件内容。在命令模式下按下 i 进入插入模式。</p></blockquote> <h2 id="创建文件"><a href="#创建文件" class="header-anchor">#</a> 创建文件</h2> <p><code>vi filename</code></p> <h2 id="退出"><a href="#退出" class="header-anchor">#</a> 退出</h2> <div class="language- extra-class"><pre class="language-text"><code>不保存退出 – 在命令模式中输入 :q!
+
+保存并退出 – 在命令模式中输入 :wq
+</code></pre></div><h2 id="移动光标"><a href="#移动光标" class="header-anchor">#</a> 移动光标</h2> <div class="language- extra-class"><pre class="language-text"><code>
+k 将光标上移一行
+
+j 将光标下移一行
+
+h 将光标左移一个字母
+
+l 将光标右移一个字母注意：如果你想通过一个命令上移或下移多行，或者左移、右移多个字母，你可以使用 4k 或者 5j，这两条命令会分别上移 4 行或者右移 5 个字母。
+
+0 将光标移动到该行行首
+
+$ 将光标移动到该行行尾
+
+nG 将光标移动到第 n 行
+
+G 将光标移动到文件的最后一行
+
+{ 将光标移动到上一段
+
+} 将光标移动到下一段
+</code></pre></div><h2 id="编辑文本"><a href="#编辑文本" class="header-anchor">#</a> 编辑文本</h2> <div class="language- extra-class"><pre class="language-text"><code>
+i 在光标所在行的位置插入内容
+
+I 在光标所在行的行首插入内容
+
+a 在当前光标之后插入内容
+
+A 在当前光标之后插入内容
+
+o 在当前光标所在行之前添加一行
+
+O 在当前光标所在行之后添加一行
+</code></pre></div><h2 id="删除文本"><a href="#删除文本" class="header-anchor">#</a> 删除文本</h2> <div class="language- extra-class"><pre class="language-text"><code>dd 删除光标所在的整行内容，可以在 dd 前增加数字，比如 2dd 可以删除从光标所在行开始的两行
+
+d$ 删除从光标所在行开始的所有行
+
+d^ 删除从文件开始直到光标所在行的所有行
+
+dw 删除从光标所在位置直到下一个词开始的所有内容
+</code></pre></div><h2 id="复制与黏贴"><a href="#复制与黏贴" class="header-anchor">#</a> 复制与黏贴</h2> <div class="language- extra-class"><pre class="language-text"><code>yy 复制当前行，在 yy 前添加数字可以复制多行
+
+p 在光标之后粘贴复制行
+
+P 在光标之前粘贴复制行
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/Linux/编码类型.html" class="prev">
+        编码类型
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/blog/assets/js/app.18cdfc2c.js" defer></script><script src="/blog/assets/js/2.272c6da6.js" defer></script><script src="/blog/assets/js/24.ee2205f8.js" defer></script><script src="/blog/assets/js/3.4c2167e5.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用Nest CLI设置新项目 | 妍辰~</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/blog/favicon.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <script>var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3673cdd1fee1a108e55a88e9d67f4f07";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })()</script>
+    <meta name="description" content="JavaScript Node.js">
+    <meta name="keywords" itemprop="keywords" content="JavaScript Node.js">
+    <meta property="og:title" content="JavaScript Node.js">
+    <meta property="og:description" content="JavaScript Node.js">
+    <link rel="preload" href="/blog/assets/css/0.styles.519963dd.css" as="style"><link rel="preload" href="/blog/assets/js/app.18cdfc2c.js" as="script"><link rel="preload" href="/blog/assets/js/2.272c6da6.js" as="script"><link rel="preload" href="/blog/assets/js/41.a7b31ee5.js" as="script"><link rel="preload" href="/blog/assets/js/3.4c2167e5.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4e2cb940.js"><link rel="prefetch" href="/blog/assets/js/11.021b7cc6.js"><link rel="prefetch" href="/blog/assets/js/12.e8866b98.js"><link rel="prefetch" href="/blog/assets/js/13.d7504f38.js"><link rel="prefetch" href="/blog/assets/js/14.3d3e0959.js"><link rel="prefetch" href="/blog/assets/js/15.49da7f4e.js"><link rel="prefetch" href="/blog/assets/js/16.dc12210a.js"><link rel="prefetch" href="/blog/assets/js/17.b969adda.js"><link rel="prefetch" href="/blog/assets/js/18.b977e223.js"><link rel="prefetch" href="/blog/assets/js/19.2074f0f6.js"><link rel="prefetch" href="/blog/assets/js/20.61bf4c8e.js"><link rel="prefetch" href="/blog/assets/js/21.17fab134.js"><link rel="prefetch" href="/blog/assets/js/22.5dd0ad1b.js"><link rel="prefetch" href="/blog/assets/js/23.d8a25e70.js"><link rel="prefetch" href="/blog/assets/js/24.ee2205f8.js"><link rel="prefetch" href="/blog/assets/js/25.f2d70a23.js"><link rel="prefetch" href="/blog/assets/js/26.8affd8f7.js"><link rel="prefetch" href="/blog/assets/js/27.39af6414.js"><link rel="prefetch" href="/blog/assets/js/28.8aa380ae.js"><link rel="prefetch" href="/blog/assets/js/29.6fd970ed.js"><link rel="prefetch" href="/blog/assets/js/30.3db650a5.js"><link rel="prefetch" href="/blog/assets/js/31.3a5fbf0b.js"><link rel="prefetch" href="/blog/assets/js/32.027296c1.js"><link rel="prefetch" href="/blog/assets/js/33.4a3b9369.js"><link rel="prefetch" href="/blog/assets/js/34.23cd9086.js"><link rel="prefetch" href="/blog/assets/js/35.2b4f598f.js"><link rel="prefetch" href="/blog/assets/js/36.f894129d.js"><link rel="prefetch" href="/blog/assets/js/37.b2109f0d.js"><link rel="prefetch" href="/blog/assets/js/38.3936c4a7.js"><link rel="prefetch" href="/blog/assets/js/39.1e85e682.js"><link rel="prefetch" href="/blog/assets/js/4.3fc220be.js"><link rel="prefetch" href="/blog/assets/js/40.19195c14.js"><link rel="prefetch" href="/blog/assets/js/42.b07df96e.js"><link rel="prefetch" href="/blog/assets/js/43.62b5869e.js"><link rel="prefetch" href="/blog/assets/js/44.4e7d770a.js"><link rel="prefetch" href="/blog/assets/js/45.7f18e125.js"><link rel="prefetch" href="/blog/assets/js/46.22d9d0ae.js"><link rel="prefetch" href="/blog/assets/js/5.c8fedf2a.js"><link rel="prefetch" href="/blog/assets/js/6.a67beace.js"><link rel="prefetch" href="/blog/assets/js/7.12ec32d5.js"><link rel="prefetch" href="/blog/assets/js/8.8034232f.js"><link rel="prefetch" href="/blog/assets/js/9.8e739b43.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.519963dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">妍辰~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/home/" class="nav-link">
+  目录
+</a></div><div class="nav-item"><a href="https://github.com/trlgml/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/home/" class="nav-link">
+  目录
+</a></div><div class="nav-item"><a href="https://github.com/trlgml/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/TypeScript/" aria-current="page" class="sidebar-link">TypeScript</a></li><li><a href="/blog/TypeScript/nest.js笔记.html" class="active sidebar-link">nest.js笔记</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/TypeScript/nest.js-DI.html" class="sidebar-link">nest.js-DI</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="使用nest-cli设置新项目"><a href="#使用nest-cli设置新项目" class="header-anchor">#</a> 使用Nest CLI设置新项目</h3> <div class="language- extra-class"><pre class="language-text"><code>npm i -g @nestjs/cli
+nest new project
+</code></pre></div><ul><li>安装缓慢可考虑更改 npm 镜像源，nrm使用方式。</li></ul> <hr> <div class="language- extra-class"><pre class="language-text"><code>$ npm i -g nrm
+
+$ nrm ls
+
+  npm ---- https://registry.npmjs.org/
+  cnpm --- http://r.cnpmjs.org/
+  taobao - https://registry.npm.taobao.org/
+  nj ----- https://registry.nodejitsu.com/
+  rednpm - http://registry.mirror.cqupt.edu.cn/
+  npmMirror  https://skimdb.npmjs.com/registry/
+  edunpm - http://registry.enpmjs.org/
+
+$ nrm use taobao
+
+</code></pre></div><hr> <h3 id="文件说明"><a href="#文件说明" class="header-anchor">#</a> 文件说明</h3> <table><thead><tr><th>文件</th> <th>描述</th></tr></thead> <tbody><tr><td>app.controller.ts</td> <td>单一路径的基本控制器样本。</td></tr> <tr><td>app.module.ts</td> <td>应用程序的根模块。</td></tr> <tr><td>main.ts</td> <td>使用核心功能NestFactory创建Nest应用程序实例的应用程序的入口文件。</td></tr></tbody></table> <ul><li>main.ts包括一个异步功能。NestFactory公开了一些允许创建应用程序实例的静态方法。该create()方法返回一个实现INestApplication接口的应用程序对象。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  await app.listen(3000);
+}
+bootstrap();
+</code></pre></div><h3 id="controllers"><a href="#controllers" class="header-anchor">#</a> Controllers</h3> <blockquote><p>控制器负责处理传入的请求并将响应返回给客户端。我们将使用@Controller()装饰器，它是定义基本控制器所<strong>必需的</strong>。我们将指定一个可选的路由路径前缀cats。在@Controller()装饰器中使用路径前缀可以使我们轻松地对一组相关的路由进行分组，并最大程度地减少重复代码。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import { Controller, Get } from '@nestjs/common';
+
+@Controller('cats')
+export class CatsController {
+  @Get()
+  findAll(): string {
+    return 'This action returns all cats';
+  }
+}
+</code></pre></div><blockquote><p>会为的请求生成路由映射GET /cats，Nest将请求路由到我们的用户定义的findAll()方法。我们在此处选择的方法名称完全是任意的，Nest不对选择的方法名称赋予任何意义。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>要使用CLI创建控制器，只需执行$ nest g controller cats命令
+</code></pre></div><h6 id="nest运用两个不同的方式来操纵响应"><a href="#nest运用两个不同的方式来操纵响应" class="header-anchor">#</a> Nest运用两个不同的方式来操纵响应</h6> <table><thead><tr><th>方式</th> <th>描述</th></tr></thead> <tbody><tr><td>推荐</td> <td>使用此内置方法，当请求处理程序返回JavaScript对象或数组时，它将自动序列化为JSON。当它返回一个JavaScript基本类型（例如string，number，boolean）。此外，响应的状态码默认情况下始终为200，但使用201的POST请求除外。我们可以通过@HttpCode(...)在处理程序级别添加装饰器来轻松更改此行为（请参见状态码）。</td></tr> <tr><td>特定</td> <td>我们可以使用特定于库的（例如Express）响应对象，可以使用@Res()装饰器将其注入到方法处理程序签名（例如findAll(@Res() response)）中。通过这种方法，您有能力（也有责任）使用该对象公开的本机响应处理方法。例如，使用Express，您可以使用以下代码构建响应response.status(200).send()</td></tr></tbody></table> <blockquote><p>您不能同时使用两种方法。Nest检测到处理程序何时使用@Res()或@Next()，表明您已选择特定于库的选项。如果同时使用两种方法，则将针对该单条路线自动禁用 “标准”方法，并且该方法将不再按预期工作。</p></blockquote> <table><thead><tr><th>Nest</th> <th>Express</th></tr></thead> <tbody><tr><td>@Request() / @Req()</td> <td>req</td></tr> <tr><td>@Response() / @Res()</td> <td>res</td></tr> <tr><td>@Next()</td> <td>next</td></tr> <tr><td>@Session()</td> <td>req.session</td></tr> <tr><td>@Param(param?: string)</td> <td>req.params[param]</td></tr> <tr><td>@Body(param?: string)</td> <td>req.body[param]</td></tr> <tr><td>@Query(param?: string)</td> <td>req.query[param]</td></tr> <tr><td>@Headers(param?: string)</td> <td>req.headers[param]</td></tr></tbody></table> <div class="language- extra-class"><pre class="language-text"><code>import { Controller, Get, Req, Res, HttpStatus } from '@nestjs/common';
+import { Request, Response } from 'express';
+
+@Controller('cats')
+export class AppController {
+  @Get()
+  findAll(@Req() request: Request, @Res() response: Response) {
+    response.status(HttpStatus.OK).send('This action returns all cats')
+  }
+}
+</code></pre></div><h6 id="更多方法"><a href="#更多方法" class="header-anchor">#</a> 更多方法</h6> <blockquote><p>Nest 提供了标准的HTTP请求端点装饰的其余部分以相同的方式- ，@Put()，@Delete()，@Patch()，@Options()，@Head()和@All()。每个代表各自的HTTP请求方法。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import { Controller, Get, Post } from '@nestjs/common';
+
+@Controller('cats')
+export class CatsController {
+  @Post()
+  create(): string {
+    return 'This action adds a new cat';
+  }
+
+  @Get()
+  findAll(): string {
+    return 'This action returns all cats';
+  }
+}
+</code></pre></div><h6 id="通配符"><a href="#通配符" class="header-anchor">#</a> 通配符</h6> <div class="language- extra-class"><pre class="language-text"><code>@Get('ab*cd')
+findAll() {
+  return 'This route uses a wildcard';
+}
+</code></pre></div><h6 id="状态代码"><a href="#状态代码" class="header-anchor">#</a> 状态代码</h6> <div class="language- extra-class"><pre class="language-text"><code>import { HttpCode, Post } from '@nestjs/common';
+
+@Post()
+@HttpCode(204)
+create() {
+  return 'This action adds a new cat';
+}
+</code></pre></div><h6 id="响应头"><a href="#响应头" class="header-anchor">#</a> 响应头</h6> <div class="language- extra-class"><pre class="language-text"><code>import { Header, Post } from '@nestjs/common';
+@Post()
+@Header('Cache-Control', 'none')
+create() {
+  return 'This action adds a new cat';
+}
+</code></pre></div><h6 id="重定向"><a href="#重定向" class="header-anchor">#</a> 重定向</h6> <div class="language- extra-class"><pre class="language-text"><code>import { Get, Redirect } from '@nestjs/common';
+
+@Get()
+@Redirect('https://nestjs.com', 301)
+</code></pre></div><h6 id="路由参数"><a href="#路由参数" class="header-anchor">#</a> 路由参数</h6> <div class="language- extra-class"><pre class="language-text"><code>import { Get, Param } from '@nestjs/common';
+
+@Get(':id')
+findOne(@Param() params): string {
+  console.log(params.id);
+  return `This action returns a #${params.id} cat`;
+}
+</code></pre></div><h6 id="异步"><a href="#异步" class="header-anchor">#</a> 异步</h6> <ul><li>async / await</li></ul> <div class="language- extra-class"><pre class="language-text"><code>@Get()
+async findAll(): Promise&lt;any[]&gt; {
+  return [];
+}
+</code></pre></div><ul><li>RxJS observable streams</li></ul> <div class="language- extra-class"><pre class="language-text"><code>@Get()
+findAll(): Observable&lt;any[]&gt; {
+  return of([]);
+}
+</code></pre></div><h6 id="我们使用-module-装饰器将元数据附加到模块类-app-module-ts"><a href="#我们使用-module-装饰器将元数据附加到模块类-app-module-ts" class="header-anchor">#</a> 我们使用@Module()装饰器将元数据附加到模块类(app.module.ts)</h6> <div class="language- extra-class"><pre class="language-text"><code>import { Module } from '@nestjs/common';
+import { CatsController } from './cats/cats.controller';
+
+@Module({
+  controllers: [CatsController],
+})
+export class AppModule {}
+</code></pre></div><h3 id="providers"><a href="#providers" class="header-anchor">#</a> Providers</h3> <p>普通的JavaScript类，在类声明之前带有@Injectable()装饰器。</p> <div class="language- extra-class"><pre class="language-text"><code>import { Injectable } from '@nestjs/common';
+
+interface Cat {
+  name: string;
+  age: number;
+  breed: string;
+}
+
+@Injectable()
+export class CatsService {
+  private readonly cats: Cat[] = [];
+
+  create(cat: Cat) {
+    this.cats.push(cat);
+  }
+
+  findAll(): Cat[] {
+    return this.cats;
+  }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>要使用CLI创建服务，只需执行$ nest g service cats命令
+</code></pre></div><h6 id="依赖注入"><a href="#依赖注入" class="header-anchor">#</a> 依赖注入</h6> <blockquote><p>Nest将通过CatsService创建并返回的实例到catsService，并传递给控制器的构造函数</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>constructor(private readonly catsService: CatsService) {}
+</code></pre></div><h6 id="现在我们已经定义了-catsservice-并且已经有了该服务的使用者-catscontroller-我们需要在nest中注册该服务-以便它可以执行注入。为此-我们编辑模块文件-app-module-ts-然后将服务添加到装饰器的providers数组中-module"><a href="#现在我们已经定义了-catsservice-并且已经有了该服务的使用者-catscontroller-我们需要在nest中注册该服务-以便它可以执行注入。为此-我们编辑模块文件-app-module-ts-然后将服务添加到装饰器的providers数组中-module" class="header-anchor">#</a> 现在我们已经定义了（CatsService），并且已经有了该服务的使用者（CatsController），我们需要在Nest中注册该服务，以便它可以执行注入。为此，我们编辑模块文件（app.module.ts），然后将服务添加到装饰器的providers数组中@Module()</h6> <div class="language- extra-class"><pre class="language-text"><code>import { Module } from '@nestjs/common';
+import { CatsController } from './cats/cats.controller';
+import { CatsService } from './cats/cats.service';
+
+@Module({
+  controllers: [CatsController],
+  providers: [CatsService],
+})
+export class AppModule {}
+</code></pre></div><h3 id="modules"><a href="#modules" class="header-anchor">#</a> Modules</h3> <blockquote><p>模块是带有@Module()装饰器的类。@Module()装饰提供了元数据Nest利用的组织应用程序结构。每个应用程序至少有一个模块，一个根模块。根模块是Nest用来构建应用程序图的起点-Nest 用来解析模块和提供者关系以及依赖关系的内部数据结构。虽然从理论上讲很小的应用程序可能只有根模块，但这不是典型的情况。我们要强调，强烈建议将模块作为组织组件的有效方法。因此，对于大多数应用而言，最终的架构将采用多个模块，每个模块封装一组紧密相关的功能。</p></blockquote> <table><thead><tr><th>属性</th> <th>描述</th></tr></thead> <tbody><tr><td>providers</td> <td>Nest注入器将实例化的提供程序，并且至少可以在此模块之间共享这些提供程序</td></tr> <tr><td>controllers</td> <td>此模块中定义的必须实例化的一组控制器</td></tr> <tr><td>imports</td> <td>导出模块所需的提供程序的导入模块列表</td></tr> <tr><td>exports</td> <td>providers该模块提供的子集，并且应该在导入该模块的其他模块中可用</td></tr></tbody></table> <blockquote><p>CatsController与CatsService属于同一应用程序域.我们将创建CatsModule</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import { Module } from '@nestjs/common';
+import { CatsController } from './cats.controller';
+import { CatsService } from './cats.service';
+
+@Module({
+  controllers: [CatsController],
+  providers: [CatsService],
+  exports: [CatsService]
+})
+export class CatsModule {}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>要使用CLI创建模块，只需执行$ nest g module cats命令
+</code></pre></div><blockquote><p>我们CatsModule在cats.module.ts文件中定义了，并将与此模块相关的所有内容都移到了cats目录中。我们需要做的最后一件事是将该模块导入根模块（文件中AppModule定义的app.module.ts）</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import { Module } from '@nestjs/common';
+import { CatsModule } from './cats/cats.module';
+
+@Module({
+  imports: [CatsModule],
+})
+export class AppModule {}
+</code></pre></div><h3 id="middleware"><a href="#middleware" class="header-anchor">#</a> Middleware</h3> <blockquote><p>中间件是在路由处理程序之前调用的函数。对请求和响应对象进行更改。结束请求-响应周期。调用堆栈中的下一个中间件函数。如果当前的中间件功能没有结束请求-响应周期，则必须调用next()将控制权传递给下一个中间件功能。否则，该请求将被挂起。</p></blockquote> <blockquote><p>可以在函数中或在带有@Injectable()装饰器的类中实现自定义Nest中间件(logger.middleware.ts)</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import { Injectable, NestMiddleware } from '@nestjs/common';
+import { Request, Response } from 'express';
+
+@Injectable()
+export class LoggerMiddleware implements NestMiddleware {
+  use(req: Request, res: Response, next: Function) {
+    console.log('Request...');
+    next();
+  }
+}
+</code></pre></div><blockquote><p>当您的中间件不需要任何依赖项时，请考虑使用函数中间件更简单</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>export function logger(req, res, next) {
+  console.log(`Request...`);
+  next();
+};
+</code></pre></div><h6 id="应用中间件"><a href="#应用中间件" class="header-anchor">#</a> 应用中间件</h6> <blockquote><p>@Module()装饰器中没有中间件的位置。相反，我们使用configure()模块类的方法进行设置。包含中间件的模块必须实现该NestModule接口。让我们LoggerMiddleware在AppModule级别上进行设置。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
+import { LoggerMiddleware } from './common/middleware/logger.middleware';
+import { CatsModule } from './cats/cats.module';
+
+@Module({
+  imports: [CatsModule],
+})
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(LoggerMiddleware)
+      .forRoutes('cats');// cats路径的所以请求
+      //.forRoutes({ path: 'cats', method: RequestMethod.GET });cats的get请求
+      //forRoutes({ path: 'ab*cd', method: RequestMethod.ALL });匹配'ab*cd'路由的所有请求
+  }
+}
+</code></pre></div><h6 id="全局中间件"><a href="#全局中间件" class="header-anchor">#</a> 全局中间件</h6> <blockquote><p>如果要一次将中间件绑定到每个注册的路由，则可以使用实例INestApplication提供的方法use()</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>function logger(req, res, next) {
+  next();
+}
+const app = await NestFactory.create(AppModule);
+app.use(logger);
+await app.listen(3000);
+</code></pre></div><h6 id="多个中间件"><a href="#多个中间件" class="header-anchor">#</a> 多个中间件</h6> <blockquote><p>为了绑定顺序执行的多个中间件，只需在apply()方法内部提供一个逗号分隔的列表：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>consumer.apply(cors(), helmet(), logger).forRoutes(CatsController);
+</code></pre></div><h6 id="middleware-consumer"><a href="#middleware-consumer" class="header-anchor">#</a> Middleware consumer</h6> <div class="language- extra-class"><pre class="language-text"><code>consumer
+  .apply(LoggerMiddleware)
+  .exclude(
+    { path: 'cats', method: RequestMethod.GET },
+    { path: 'cats', method: RequestMethod.POST }
+  )
+  .forRoutes(CatsController);
+</code></pre></div><h3 id="exception-filters"><a href="#exception-filters" class="header-anchor">#</a> Exception filters</h3> <blockquote><p>Nest带有内置的异常层，该层负责处理应用程序中所有未处理的异常。当您的应用程序代码未处理异常时，该层将捕获该异常，然后自动发送适当的用户友好响应。开箱即用，此操作由内置的全局异常过滤器执行，该过滤器处理类型HttpException（及其子类）的异常。如果无法识别异常（既不HttpException是继承自的类也不是HttpException），则内置异常过滤器会生成以下默认JSON响应：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;statusCode&quot;: 500,
+  &quot;message&quot;: &quot;Internal server error&quot;
+}
+
+</code></pre></div><h6 id="抛出标准异常"><a href="#抛出标准异常" class="header-anchor">#</a> 抛出标准异常</h6> <div class="language- extra-class"><pre class="language-text"><code>@Get()
+async findAll() {
+  throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
+}
+</code></pre></div><h6 id="自定义异常"><a href="#自定义异常" class="header-anchor">#</a> 自定义异常</h6> <div class="language- extra-class"><pre class="language-text"><code>export class ForbiddenException extends HttpException {
+  constructor() {
+    super('Forbidden', HttpStatus.FORBIDDEN);
+  }
+}
+
+
+@Get()
+async findAll() {
+  throw new ForbiddenException();
+}
+</code></pre></div><h6 id="内置的http-exceptions"><a href="#内置的http-exceptions" class="header-anchor">#</a> 内置的HTTP exceptions</h6> <div class="language- extra-class"><pre class="language-text"><code>BadRequestException
+UnauthorizedException
+NotFoundException
+ForbiddenException
+NotAcceptableException
+RequestTimeoutException
+ConflictException
+GoneException
+PayloadTooLargeException
+UnsupportedMediaTypeException
+UnprocessableEntityException
+InternalServerErrorException
+NotImplementedException
+BadGatewayException
+ServiceUnavailableException
+GatewayTimeoutException
+</code></pre></div><h6 id="exception-filters-2"><a href="#exception-filters-2" class="header-anchor">#</a> Exception filters</h6> <blockquote><p>您可能希望完全控制异常层,例如，您可能要添加日志记录或基于一些动态因素使用其他JSON模式。
+(http-exception.filter.ts)</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import { ExceptionFilter, Catch, ArgumentsHost, HttpException } from '@nestjs/common';
+import { Request, Response } from 'express';
+
+@Catch(HttpException)
+export class HttpExceptionFilter implements ExceptionFilter {
+  catch(exception: HttpException, host: ArgumentsHost) {
+    const ctx = host.switchToHttp();
+    const response = ctx.getResponse&lt;Response&gt;();
+    const request = ctx.getRequest&lt;Request&gt;();
+    const status = exception.getStatus();
+
+    response
+      .status(status)
+      .json({
+        statusCode: status,
+        timestamp: new Date().toISOString(),
+        path: request.url,
+      });
+  }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>所有异常过滤器都应实现通用ExceptionFilter&lt;T&gt;接口。这要求您向catch(exception: T, host: ArgumentsHost)方法提供其指示的签名。T指示异常的类型。
+</code></pre></div><blockquote><p>使用方式</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>@Post()
+//@UseFilters(new HttpExceptionFilter())
+@UseFilters(HttpExceptionFilter)
+async create() {
+  throw new ForbiddenException();
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>//@UseFilters(new HttpExceptionFilter())
+@UseFilters(HttpExceptionFilter)
+export class CatsController {}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  app.useGlobalFilters(new HttpExceptionFilter());
+  await app.listen(3000);
+}
+bootstrap();
+</code></pre></div><blockquote><p>捕捉全部异常.为了捕获每个未处理的异常（无论异常类型如何），请将@Catch()修饰符的参数列表保留为空.</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>import { ExceptionFilter, Catch, ArgumentsHost, HttpException, HttpStatus } from '@nestjs/common';
+
+@Catch()
+export class AllExceptionsFilter implements ExceptionFilter {
+  catch(exception: unknown, host: ArgumentsHost) {
+    const ctx = host.switchToHttp();
+    const response = ctx.getResponse();
+    const request = ctx.getRequest();
+
+    const status =
+      exception instanceof HttpException
+        ? exception.getStatus()
+        : HttpStatus.INTERNAL_SERVER_ERROR;
+
+    response.status(status).json({
+      statusCode: status,
+      timestamp: new Date().toISOString(),
+      path: request.url,
+    });
+  }
+}
+</code></pre></div><h3 id="pipes"><a href="#pipes" class="header-anchor">#</a> Pipes</h3> <blockquote><p>管道是用@Injectable()装饰器注释的类。管道应实现该PipeTransform接口</p></blockquote> <ul><li>转换：将输入数据转换为所需的输出</li> <li>验证：评估输入数据，如果有效，只需将其原样传递即可；否则，当数据不正确时抛出异常</li></ul> <blockquote><p>管道arguments均由控制器路由处理程序处理。Nest会在调用方法之前插入一个管道，并且管道会接收指定给该方法的参数。那时将进行任何转换或验证操作，然后使用任何（可能）转换后的参数调用路由处理程序。管道在例外区域内运行。这意味着，当Pipe引发异常时，它由异常层（全局异常过滤器和应用于当前上下文的所有异常过滤器）处理。鉴于以上所述，应该清楚的是，当在Pipe中引发异常时，随后将不执行任何控制器方法。</p></blockquote> <h6 id="内置管道"><a href="#内置管道" class="header-anchor">#</a> 内置管道</h6> <ul><li>ValidationPipe</li> <li>ParseIntPipe</li> <li>ParseUUIDPipe</li></ul> <h3 id="interceptor"><a href="#interceptor" class="header-anchor">#</a> Interceptor</h3> <h3 id="guard"><a href="#guard" class="header-anchor">#</a> Guard</h3> <h3 id="decorator"><a href="#decorator" class="header-anchor">#</a> Decorator</h3> <h3 id="循环引用的问题解决"><a href="#循环引用的问题解决" class="header-anchor">#</a> 循环引用的问题解决</h3> <ul><li>服务的循环引用</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import { Injectable, Inject, forwardRef } from '@nestjs/common';
+// CommonService依赖注入了CatsService，而CatsService也依赖注入了CommonService
+@Injectable()
+export class CatsService {
+    public constructor(
+        @Inject(forwardRef(() =&gt; CommonService))
+        private readonly commonService: CommonService,
+    ) { }
+}
+@Injectable()
+export class CommonService {
+    public constructor(
+        @Inject(forwardRef(() =&gt; CatsService))
+        private readonly catsService: CatsService,
+    ) { }
+}
+</code></pre></div><ul><li>模块的循环引用</li></ul> <div class="language- extra-class"><pre class="language-text"><code>@Module({
+   imports: [forwardRef(() =&gt; CommonModule)],
+})
+export class CatsModule {}
+
+@Module({
+   imports: [forwardRef(() =&gt; CatsModule)],
+})
+export class CommonModule {}
+</code></pre></div><ul><li>其他</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import { Injectable, OnModuleInit } from '@nestjs/common';
+import { CatsService } from './cats.service';
+import { ModuleRef } from '@nestjs/core';
+/**
+ * 3.Nest提供了ModuleRef可以简单地注入任何组件的类。也是解决循环依赖的方式
+ */
+@Injectable()
+export class ModuleService implements OnModuleInit {
+    private service: CatsService;
+    public constructor(private readonly moduleRef: ModuleRef) { }
+    
+    public onModuleInit() {
+        // ModuleRef有一个get()方法，允许检索当前模块中可用的提供程序。此外，您可以切换到非严格模式，这样您就可以在整个应用程序中选择任何现有的提供程序。
+        this.service = this.moduleRef.get(CatsService, { strict: false });
+    }
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/TypeScript/" class="prev router-link-active">
+        TypeScript
+      </a></span> <span class="next"><a href="/blog/TypeScript/nest.js-DI.html">
+        nest.js-DI
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/blog/assets/js/app.18cdfc2c.js" defer></script><script src="/blog/assets/js/2.272c6da6.js" defer></script><script src="/blog/assets/js/41.a7b31ee5.js" defer></script><script src="/blog/assets/js/3.4c2167e5.js" defer></script>
+  </body>
+</html>
