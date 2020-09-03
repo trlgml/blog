@@ -95,9 +95,11 @@ module.exports = {
         ['brew 安装', 'brew 安装'],
         ['软件', '软件'],
         ['终端工具', '终端工具'],
+        ['终端配置代理', '终端配置代理'],
       ],
       '/Other/': [
         ['', '其他'],
+        ['charles抓包工具', 'charles抓包工具'],
         {
           title: "menu",
           name: "menu",
