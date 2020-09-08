@@ -41,6 +41,14 @@ module.exports = {
       '/JavaScript/': [
         ['', 'JavaScript'],
         ['ESLint', 'ESLint'],
+        ['Babel', 'Babel'],
+        ['JS 原型继承和类式继承', 'JS 原型继承和类式继承'],
+        ['模块', '模块'],
+        ['跨域不带cookie问题', '跨域不带cookie问题'],
+        ['点击劫持', '点击劫持'],
+        ['CSRF 攻击', 'CSRF 攻击'],
+        ['XSS 攻击', 'XSS 攻击'],
+        ['base64', 'base64'],
       ],
       '/HTML/': [
         ['', 'HTML'],
@@ -55,17 +63,25 @@ module.exports = {
         ['安装和版本管理', '安装和版本管理'],
         ['包管理', '包管理'],
         ['PM2', 'PM2'],
+        ['修改node_modules依赖库的文件', '修改node_modules依赖库的文件'],
+        ['nodemon', 'nodemon'],
+        ['passport', 'passport'],
+        ['session', 'session'],
       ],
       '/数据库/': [
         ['', '数据库'],
         ['redis命令', 'redis命令'],
         ['缓存的使用', '缓存的使用'],
+        ['索引的设计和使用', '索引的设计和使用'],
+        ['mysql语句', 'mysql语句'],
+        ['mysql存储引擎', 'mysql存储引擎'],
       ],
       '/React/': [
         ['', 'React'],
       ],
       '/TypeScript/': [
         ['', 'TypeScript'],
+        ['杂项笔记', '杂项笔记'],
         ['nest.js笔记', 'nest.js笔记'],
         ['nest.js-DI', 'nest.js-DI'],
       ],
@@ -85,10 +101,14 @@ module.exports = {
         ['回滚提交记录', '回滚提交记录'],
         ['提交信息模板', '提交信息模板'],
         ['合并多次提交', '合并多次提交'],
+        ['hook工具', 'hook工具'],
+        ['备忘录', '备忘录'],
       ],
       '/HTTP/': [
         ['', 'HTTP'],
         ['响应状态码', '响应状态码'],
+        ['HTTP消息头', 'HTTP消息头'],
+        ['DNS域名解析中A、AAAA、CNAME、MX、NS、TXT、SRV、SOA、PTR各项记录的作用', 'DNS域名解析中A、AAAA、CNAME、MX、NS、TXT、SRV、SOA、PTR各项记录的作用'],
       ],
       '/MACOS/': [
         ['', 'MACOS'],
@@ -102,6 +122,10 @@ module.exports = {
       '/Other/': [
         ['', '其他'],
         ['charles抓包工具', 'charles抓包工具'],
+        ['Chrome 插件集', 'Chrome 插件集'],
+        ['opencc', 'opencc'],
+        ['Vs Code', 'Vs Code'],
+        ['ab压力测试', 'ab压力测试'],
         {
           title: "menu",
           name: "menu",
