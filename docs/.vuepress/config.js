@@ -67,6 +67,7 @@ module.exports = {
         ['nodemon', 'nodemon'],
         ['passport', 'passport'],
         ['session', 'session'],
+        ['常用库汇总', '常用库汇总'],
       ],
       '/数据库/': [
         ['', '数据库'],
